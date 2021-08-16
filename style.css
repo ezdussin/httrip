@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: pri-font;
+    src: url(fonts/KGEverSinceNewYork.ttf);
+}
+
+:root{
+    --primary-color: #c4dc5a;
+}
+
+/* header */
+
+header{
+    background-image: linear-gradient(var(--primary-color), white); 
+    margin: 0 auto;
+    padding: 0 60px;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}       
+
+.logo img{
+    width: 180px;
+}
+
+.side-btn{
+    padding : 20px 0;
+}
+
+.side-btn a{
+    color: white;
+    text-decoration: none;
+    font-family: pri-font;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+/* content */
+
+.content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 20px 0
+}
+
+.content h2{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    font-family: pri-font;
+    padding: 20px 0;
+}
+
+.content p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+.content .col-1{
+    margin: 20px;
+}
+
+.content .col-2{
+    margin: 20px;
+    border: 4px solid black;
+    border-radius: 20px;
+}
+
+.content .col-2 a{
+    font-family: pri-font;
+    text-decoration: none;
+    color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    font-size: 14px;
+    float: right;
+    margin: 20px;
+    padding: 5px 10px;
+}
+
+/* destinations */
+
+.section-2{
+    margin: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.section-2 h2{
+    text-align: center;
+    font-family: pri-font;
+    letter-spacing: 5px;
+    padding: 10px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+.destinations{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.destinations h4{
+    text-align: center;
+    font-family: pri-font;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.destinations img{
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+/* footer */
+
+footer{
+    background-color: var(--primary-color);
+}
+
+footer p{
+    font-size: 12px;
+    padding: 8px;
+}
+
+footer hr{ 
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 98%;
+    align-items: center;
+    margin: auto;
+}
+
+.footer-cols{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.footer-cols .col-1, .footer-cols .col-2, .footer-cols .col-3{
+    padding: 10px;
+}
+
+.footer-cols h4{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-cols a{
+    color: black;
+    text-decoration: none;  
+}
+
+.footer-cols li{
+    text-align: center;
+    list-style-type: none;
+    margin: 2px;
+}
+
+@media only screen and (max-width: 1114px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .destinations{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 764px){
+    .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .destinations{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
